@@ -1,33 +1,37 @@
-<?php 
+<?php
 
 /**
-* 
-*/
+ * 
+ */
 class Page_Model_Template_Template
 {
 
-    protected $_view;
-
-    function __construct($view)
-    {
-        $this->_view = $view;
-    }
+	protected $_view;
+	protected $_csrf_section = "omega_index";
+	protected $_csrf;
 
 
-	public function getContentseccion($seccion){
+	function __construct($view)
+	{
+		$this->_view = $view;
+	}
+
+
+	public function getContentseccion($seccion)
+	{
 		$contenidoModel = new Page_Model_DbTable_Contenido();
 		$contenidos = [];
-		$rescontenidos = $contenidoModel->getList("contenido_estado='1' AND contenido_seccion = '$seccion' AND contenido_padre = '0' ","orden ASC");
+		$rescontenidos = $contenidoModel->getList("contenido_estado='1' AND contenido_seccion = '$seccion' AND contenido_padre = '0' ", "orden ASC");
 		foreach ($rescontenidos as $key => $contenido) {
 			$contenidos[$key] = [];
 			$contenidos[$key]['detalle'] = $contenido;
 			$padre = $contenido->contenido_id;
-			$hijos = $contenidoModel->getList("contenido_estado='1' AND contenido_padre = '$padre' ","orden ASC");
+			$hijos = $contenidoModel->getList("contenido_estado='1' AND contenido_padre = '$padre' ", "orden ASC");
 			foreach ($hijos as $key2 => $hijo) {
 				$padre = $hijo->contenido_id;
 				$contenidos[$key]['hijos'][$key2] = [];
 				$contenidos[$key]['hijos'][$key2]['detalle'] = $hijo;
-				$nietos = $contenidoModel->getList("contenido_padre = '$padre' ","orden ASC");
+				$nietos = $contenidoModel->getList("contenido_padre = '$padre' ", "orden ASC");
 				if ($nietos) {
 					$contenidos[$key]['hijos'][$key2]['hijos'] = $nietos;
 					foreach ($nietos as $key3 => $subnietos) {
@@ -130,8 +134,12 @@ class Page_Model_Template_Template
 		return $this->_view->getRoutPHP("modules/page/Views/template/bannerprincipal.php");
 	}
 
-	public function getFormulario()
+	public function getFormulario($csrf_section, $csrf)
 	{
+		$this->_view->csrf_section = $csrf_section;
+		$this->_view->csrf = $csrf;
 		return $this->_view->getRoutPHP("modules/page/Views/template/formulario.php");
 	}
+
+
 }

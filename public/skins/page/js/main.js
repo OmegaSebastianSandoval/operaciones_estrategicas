@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("form-contact")
     ?.addEventListener("submit", function (e) {
       e.preventDefault();
-      var response = grecaptcha.getResponse();
+      const response = grecaptcha.getResponse();
       if (response.length === 0) {
         Swal.fire({
           icon: "warning",
@@ -92,15 +92,17 @@ document.addEventListener("DOMContentLoaded", () => {
           body: JSON.stringify(data),
         })
           .then((response) => response.json())
-          .then((data) => {
-            if (data.status === "success") {
+          .then((data2) => {
+           // console.log("Status:", data2.status); // Verifica el valor exacto
+
+            if (data2.status.trim().toLowerCase() === "success") {
               Swal.fire({
                 icon: "success",
                 text: "Hemos recibido tu mensaje, te responderemos a la brevedad.",
                 confirmButtonColor: "#192a4b",
                 confirmButtonText: "Continuar",
               });
-            } else if (data.status === "error") {
+            } else if (data2.status === "error") {
               Swal.fire({
                 icon: "error",
                 text: "Ha ocurrido un error, por favor intenta de nuevo.",
@@ -108,13 +110,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 confirmButtonText: "Continuar",
               });
             }
-            document.getElementById("formulario-contacto").reset();
+            document.getElementById("form-contact").reset();
             // Habilitar botón y ocultar animación
             submitBtn.disabled = false;
             $(".loader-bx").removeClass("show");
           })
 
           .catch((error) => {
+            // console.log("Error:", error);
+            
             Swal.fire({
               icon: "error",
               text: "Ha ocurrido un error, por favor intenta de nuevo.",
