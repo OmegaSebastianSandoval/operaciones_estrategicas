@@ -1,0 +1,404 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto-Black_0.ttf') format('truetype');
+  font-weight: 900; /* Peso de la fuente (900 es Black) */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto-Bold_0.ttf') format('truetype');
+  font-weight: 700; /* Peso de la fuente (700 es Bold) */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto-Light_0.ttf') format('truetype');
+  font-weight: 300; /* Peso para Roboto Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto-Medium_0.ttf') format('truetype');
+  font-weight: 500; /* Peso para Roboto Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400; /* Peso para Roboto Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto-Thin_0.ttf') format('truetype');
+  font-weight: 100; /* Peso para Roboto Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/assets/fonts/RobotoCondensed-Bold.ttf') format('truetype');
+  font-weight: 700; /* Peso para Roboto Condensed Bold */
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: "TitilliumWeb", sans-serif; */
+  font-family: 'Roboto', sans-serif;
+
+  scroll-margin-top: 15rem;
+  position: relative;
+  /* border: 1px solid red;  */
+}
+
+:root {
+  --negro: #0000;
+  --blanco: #FFFFFF;
+  --naranja: #ff9f00;
+  --azul: rgb(0, 63, 94);
+
+  --azulclaro: #5294a2;
+
+  --gris-claro: #f7f7f7;
+  --gris-oscuro: #333333;
+  --gris-medio: #595959;
+
+}
+
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100dvh;
+}
+
+
+/* *******************
+HEADER INICIO
+******************** */
+
+
+header {
+  /* padding: .75rem 0; */
+  background-color: var(--blanco);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.content-header {
+  display: grid;
+  place-items: center;
+}
+
+.separator {
+
+  display: inline-block;
+  align-self: stretch;
+  width: 1px;
+  min-height: 1em;
+  background-color: var(--azul);
+  opacity: .25;
+
+}
+
+.header-info {
+  height: 72px;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 150px;
+}
+
+.content-header a {
+  color: var(--gris-medio);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-toggler-icon {
+  width: 2em;
+  height: 2em;
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(0,63,94)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:hover {
+  box-shadow: 0 0 0 0.15rem rgba(0, 123, 255, 0.25);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none
+}
+
+
+/* *******************
+HEADER FIN
+******************** */
+
+
+
+
+
+/* ********************
+FOOTER INICIO
+************************* */
+
+
+footer{
+  padding: 15px 0;
+}
+.media a{
+  text-decoration: none;
+  color: var(--gris-medio);
+  font-size: 21px;
+  transition: transform .3s ease;
+}
+.media a:hover{
+  transform: scale(1.2);
+}
+.menu ul{
+  padding: 0;
+  margin-top: 15px;
+}
+.menu li{
+  list-style: none;
+  /* padding: 5px 0; */
+  display: flex;
+    align-items: center;
+}
+.menu li a{
+  text-decoration: none;
+  color: var(--gris-medio);
+  font-size: 16px;
+  transition: color .3s ease , font-weight .3s ease-in-out allow-discrete;
+  font-weight: 400;
+}
+
+.menu li a:hover{
+  color: var(--azul);
+  font-weight: 600;
+}
+
+.menu li a.active{
+  color: var(--azul);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+/* ********************
+FOOTER FIN
+************************* */
+
+
+
+
+/* -------------------
+ BANNERS PRINCIPAL INICIO
+ -------------------- */
+ .slider-principal {
+  width: 100%;
+}
+
+.fondo-imagen img {
+  width: 100%;
+  /* height: 400px; */
+  aspect-ratio: 14/5;
+  object-fit: fill;
+}
+
+.carousel-control-prev-icono {
+  font-size: 30px;
+  color: #343133;
+  background-color: #FFF;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+
+  padding: 4px;
+}
+
+.carousel-control-next-icono {
+  font-size: 30px;
+  color: #343133;
+  background-color: #FFF;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  font-size: 20px;
+
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 5%;
+}
+
+.contenido-banner {
+  position: absolute;
+  width: 50%;
+  /* background: #0000008a; */
+
+  height: 100%;
+  color: var(--gris-oscuro);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-align: start;
+  padding: 0 5%;
+}
+
+.contenido-banner h4 {
+  font-weight: 500;
+  color: var(--azul-oscuro);
+  font-size: 35px;
+  /* font-family: 'TitilliumWeb Light'; */
+
+
+}
+
+
+.contenido-banner h4 .resaltado {
+  font-size: 35px;
+  color: var(--azul);
+  font-weight: 700;
+
+}
+
+.contenido-banner h4::after {
+
+  content: "";
+  display: block;
+  width: 2em;
+  max-width: 70%;
+  border-bottom: 1px solid var(--azulclaro);
+  margin-right: auto;
+  padding: 5px 0;
+}
+
+
+.btn-verde {
+  background-color: var(--verde);
+  color: var(--amarillo);
+  border: 1px solid var(--verde);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 25px;
+  text-decoration: none;
+  transition: all 300ms;
+  font-weight: 500;
+}
+
+.btn-verde:hover {
+  background: var(--amarillo);
+  border: 1px solid var(--verde);
+
+  color: var(--verde);
+
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+}
+
+/* -------------------
+ BANNERS PRINCIPAL FIN
+ -------------------- */
+
+
+.main-general {
+
+  min-height: 100dvh;
+  z-index: 2;
+}
+
+
+.text-gray{
+  color: var(--gris-medio);
+}
+.text-thin{
+  font-weight: 400;
+}  
+
+
+
+/* *******************
+FORMULARIO INDEX INICIO
+ *******************- */
+.bg-greenblue{
+  background-color: var(--azulclaro);
+}
+
+.form-home{
+  padding: 30px 0;
+}
+
+.form-contact .form_input
+{
+width: 100%;
+padding: 7px 10px;
+color: var(--gris-medio);
+font-weight: 300; /* Peso para Roboto Thin */
+font-size: 15px;
+margin-bottom: 10px;
+border: 0;
+
+
+}
+
+.form-contact .form_input:focus-visible{
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 0.15rem rgba(0, 123, 255, 0.25);
+}
+
+.form-contact  .form-check-label{
+  color: var(--blanco);
+ 
+}
+.form-contact .form-check-input:checked{
+  background-color: var(--azul) !important;
+  border-color: var(--azul) !important;
+}
+
+.btn-blue{
+  padding: 7px 50px;
+  background-color: var(--azul) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blanco) ;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: background-color .3s ease;
+}
+.btn-blue:hover{
+  background-color: var(--gris-oscuro);
+}
+
+
+/* *******************
+FORMULARIO INDEX FIN
+ *******************- */
+
