@@ -414,8 +414,12 @@ class Administracion_contenidoController extends Administracion_mainController
    */
   private function getContenidoseccion()
   {
-    $array = [array()];
+    $array = [];
     $array['1'] = 'Home';
+    $array['2'] = 'Nosotros';
+    $array['3'] = 'Nuestros Servicios';
+    $array['4'] = 'Reorganización Empresarial';
+    $array['5'] = 'Mesa de Ayuda';
     return $array;
   }
 

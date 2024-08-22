@@ -7,22 +7,22 @@
     <?php if ($contenedor->contenido_fondo_imagen_tipo == 2) { ?>dinamica<?php } ?>" style="background-image:url(/images/<?php echo $contenedor->contenido_fondo_imagen; ?>); background-color:<?php echo $contenedor->contenido_fondo_color; ?>;">
   <div class="content-box container">
 		<?php if ($contenedor->contenido_titulo_ver == 1) { ?>
-			<h2><?php echo $contenedor->contenido_titulo; ?></h2>
+			<h2 class="titulo_seccion titulo_<?php echo $contenedor->contenido_id ?> <?php echo $contenedor->contenido_titulo_principal ? 'titulo_principal_seccion' : '' ?>  "><?php echo $contenedor->contenido_titulo; ?></h2>
 		<?php } ?>
 		<?php if ($contenedor->contenido_introduccion != "") { ?>
-			<div class="descripcion-seccion"><?php echo $contenedor->contenido_introduccion; ?></div>
+			<div class="introduccion-seccion"><?php echo $contenedor->contenido_introduccion; ?></div>
 		<?php } ?>
 		<?php if ($contenedor->contenido_descripcion && $contenedor->contenido_id == '198') { ?>
 			<a target="<?php if ($contenedor->contenido_enlace_abrir == '1') { ?>_BLANK<?php } ?>" href='<?php echo $contenedor->contenido_enlace; ?>'>
 				<div class="descripcion-seccion ddd"><?php echo $contenedor->contenido_descripcion; ?></div>
 			</a>
 		<?php } ?>
-		<?php if ($contenedor->contenido_descripcion && $contenedor->contenido_id != '198') { ?>
-			<div class="descripcion-seccion ddd"><?php echo $contenedor->contenido_descripcion; ?></div>
+		<?php if ($contenedor->contenido_descripcion) { ?>
+			<div class="descripcion-seccion"><?php echo $contenedor->contenido_descripcion; ?></div>
 		<?php } ?>
-		<?php if ($contenedor->contenido_enlace && $contenedor->contenido_id != '198') { ?>
+		<?php if ($contenedor->contenido_enlace) { ?>
 			<div class="boton">
-				<a href="<?php echo $contenedor->contenido_enlace; ?>" <?php if ($contenedor->contenido_enlace_abrir == 1) { ?>target="_blank" <?php } ?> <?php if ($contenedor->contenedor_enlace_abrir == 1) { ?> target="_blank" <?php } ?> class="btn btn-vermas"> <?php if ($contenedor->contenedor_vermas) { ?><?php echo $contenedor->contenido_vermas; ?><?php } else { ?>VER MÁS<?php } ?></a>
+				<a href="<?php echo $contenedor->contenido_enlace; ?>" <?php if ($contenedor->contenido_enlace_abrir == 1) { ?>target="_blank" <?php } ?>class="btn-yellow"> <?php if ($contenedor->contenedor_vermas) { ?><?php echo $contenedor->contenido_vermas; ?><?php } else { ?>Ver Más<?php } ?></a>
 			</div>
 		<?php } ?>
 		<?php if (is_countable($rescontenido['hijos']) && count($rescontenido['hijos']) > 0) { ?>

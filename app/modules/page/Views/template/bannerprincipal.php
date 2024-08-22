@@ -45,7 +45,7 @@
                   <!-- <h4> <?php echo ($banner->publicidad_nombre);  ?></h4> -->
                   <?php echo $banner->publicidad_descripcion; ?>
                   <?php if ($banner->publicidad_enlace) { ?>
-                    <a href="<?php echo $banner->publicidad_enlace; ?>" <?php echo $banner->publicidad_tipo_enlace == 1 ? 'target="_blank"' : ''; ?> class="btn-azul-oscuro">
+                    <a href="<?php echo $banner->publicidad_enlace; ?>" <?php echo $banner->publicidad_tipo_enlace == 1 ? 'target="_blank"' : ''; ?> class="btn-blue">
                       <?php echo $banner->publicidad_texto_enlace ? $banner->publicidad_texto_enlace : 'Ver más'; ?>
 
                     </a>

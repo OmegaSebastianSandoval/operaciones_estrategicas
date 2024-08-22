@@ -30,6 +30,11 @@ class Page_indexController extends Page_mainController
   {
     $this->_view->banner = $this->template->bannerPrincipal(1);
     $this->_view->contenido = $this->template->getContentseccion(1);
+
+    $this->_view->quienessomos = $this->template->getContentseccionById(12);
+
+
+
     
     $this->_csrf_section = "omega_index" . date("YmdHis");
     $this->_csrf->generateCode($this->_csrf_section);

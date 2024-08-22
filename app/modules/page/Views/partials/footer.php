@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="media">
+    <div class="media d-none">
         <span class="text-thin d-block text-gray">
             Síguenos en:
         </span>
@@ -66,36 +66,38 @@
 
     </div>
 
-    <div class="menu">
+    <div class="menu  d-none">
         <ul class="d-flex justify-content-between">
             <li>
                 <a href="/" class="<?php echo $this->botonactivo == 1 ? 'active' : '' ?>">Operación Estratégica</a>
             </li>
-            <li>
+            <li class="d-none d-lg-block">
                 <div class="vr"></div>
             </li>
             <li>
                 <a href="/page/nosotros" class="<?php echo $this->botonactivo == 2 ? 'active' : '' ?>">Nosotros</a>
             </li>
-            <li>
+            <li class="d-none d-lg-block">
                 <div class="vr"></div>
             </li>
             <li>
-                <a href="/page/servicios" class=" <?php echo $this->botonactivo == 3 ? 'active' : '' ?>" >Nuestros Servicios</a>
+                <a href="/page/servicios" class=" <?php echo $this->botonactivo == 3 ? 'active' : '' ?>">Nuestros Servicios</a>
             </li>
-            <li>
+            <li class="d-none d-lg-block">
                 <div class="vr"></div>
             </li>
             <li>
                 <a href="/page/reorganizacionempresarial" class="<?php echo $this->botonactivo == 4 ? 'active' : '' ?>">Reorganización Empresarial</a>
             </li>
-            <li>
+            <li class="d-none d-lg-block">
+
                 <div class="vr"></div>
             </li>
             <li>
                 <a href="/page/mesadeayuda" class="<?php echo $this->botonactivo == 5 ? 'active' : '' ?>">Mesa de Ayuda</a>
             </li>
-            <li>
+            <li class="d-none d-lg-block">
+
                 <div class="vr"></div>
             </li>
             <li>
@@ -105,7 +107,47 @@
         </ul>
     </div>
 
-    <div class="info-contact">
-        <?php echo $this->infopage->info_pagina_informacion_contacto_footer?>
+    <div class="info-contact  d-none">
+        <?php echo $this->infopage->info_pagina_informacion_contacto_footer ?>
     </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-3 d-flex mb-2 mb-lg-0 justify-content-center justify-content-lg-start align-items-end">
+            <a href="/">
+                <img src="/assets/LogoOE.png" alt="Logo Operacion Estratégica">
+            </a>
+
+        </div>
+        <div class="col-12 col-lg-2 d-flex mb-2 mb-lg-0 justify-content-center justify-content-lg-start align-items-end pb-0 pb-lg-2">
+
+            <?php if ($this->infopage->info_pagina_telefono) { ?>
+                <span class="info-footer">
+                    <img src="/assets/IconoTel.png" alt="Icono telefono">
+                    <?php echo $this->infopage->info_pagina_telefono ?>
+                </span>
+
+            <?php } ?>
+        </div>
+        <div class="col-12 col-lg-4 d-flex mb-2 mb-lg-0 justify-content-center justify-content-lg-start align-items-end pb-0 pb-lg-2">
+            <?php if ($this->infopage->info_pagina_correos_contacto) { ?>
+                <span class="info-footer">
+                    <img src="/assets/IconoCorreo.png" alt="Icono correo">
+                    <?php echo $this->infopage->info_pagina_correos_contacto ?>
+                </span>
+
+            <?php } ?>
+        </div>
+        <div class="col-12 col-lg-3 d-flex mb-2 mb-lg-0 justify-content-center justify-content-lg-start align-items-end pb-0 pb-lg-2">
+            <span class="info-footer">
+                <span class="info-footer" data-bs-toggle="modal" data-bs-target="#modalPoliticas" role="button">
+                    Aceptar términos y condiciones
+                </span>
+            </span>
+        </div>
+    </div>
+
+    <hr>
+    <span class="text-azul terms-span">
+        Todos los derechos reservados
+    </span>
 </div>

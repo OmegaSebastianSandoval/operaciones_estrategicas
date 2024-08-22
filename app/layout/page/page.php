@@ -15,8 +15,8 @@
   <link rel="stylesheet" href="/components/slick/slick/slick.css">
   <link rel="stylesheet" href="/components/slick/slick/slick-theme.css">
   <!-- Global CSS -->
-  <link rel="stylesheet" href="/skins/page/css/global.css?v=2">
-  <link rel="stylesheet" href="/skins/page/css/responsive.css?v=2">
+  <link rel="stylesheet" href="/skins/page/css/global.css?v=1.01">
+  <link rel="stylesheet" href="/skins/page/css/responsive.css?v=1.01">
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="/components/Font-Awesome/css/all.css">
@@ -48,6 +48,10 @@
   <!-- Main Js -->
   <script src="/skins/page/js/main.js?v=2"></script>
 
+
+  
+  <!-- metacolor -->
+  <meta name="theme-color" content="#003f5e">
   <!-- Recaptcha -->
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <meta name="description" content="<?= $this->_data['meta_description']; ?>" />

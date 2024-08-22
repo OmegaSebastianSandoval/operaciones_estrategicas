@@ -1,3 +1,22 @@
+<!-- Modal -->
+<div class="modal fade modalPoliticas" id="modalPoliticas" tabindex="-1" aria-labelledby="modalPoliticasLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border: none;background-color: transparent;">
+            <div class="modal-header px-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
+            </div>
+            <div class="modal-body bg-white pb-1">
+                <h1 class="modal-title fs-5" id="modalPoliticasLabel"><?php echo $this->infopage->info_pagina_titulo_legal ?></h1>
+                <?php echo $this->infopage->info_pagina_descripcion_legal ?>
+            </div>
+            <div class="modal-footer bg-white border-0 pt-0">
+                <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary d-none">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
 <div class="loader-bx">
     <span class="loader"></span>

@@ -53,13 +53,13 @@
                         <a class="nav-link <?php echo $this->botonactivo == 3 ? 'active' : '' ?>" href="/page/servicios">Nuestros Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $this->botonactivo == 4 ? 'active' : '' ?>" href="/reorganizacionempresarial">Reorganización Empresarial</a>
+                        <a class="nav-link <?php echo $this->botonactivo == 4 ? 'active' : '' ?>" href="/page/reorganizacionempresarial">Reorganización Empresarial</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo $this->botonactivo == 5 ? 'active' : '' ?>" href="/page/mesadeayuda">Mesa de Ayuda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $this->botonactivo == 6 ? 'active' : '' ?>" href="/page/contactenos">Contáctenos</a>
+                        <a class="nav-link <?php echo $this->botonactivo == 6 ? 'active' : '' ?>" href="/page/contacto">Contáctenos</a>
                     </li>
                    <!--  <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

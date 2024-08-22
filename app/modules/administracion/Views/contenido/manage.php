@@ -394,9 +394,9 @@
       </div>
     </div>
     <div class="botones-acciones">
-      <button class="btn btn-guardar" type="submit">Guardar</button>
       <a href="<?php echo $this->route; ?><?php if($padre){ echo "?padre=".$padre; } ?>"
-        class="btn btn-cancelar">Cancelar</a>
+      class="btn btn-cancelar">Cancelar</a>
+      <button class="btn btn-guardar" type="submit">Guardar</button>
     </div>
   </form>
 </div>

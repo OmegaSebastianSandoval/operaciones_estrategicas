@@ -1,7 +1,7 @@
 <section class="bg-greenblue form-home">
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-6">
+        <div class="row justify-content-between">
+            <div class="col-12 col-lg-5 d-flex align-items-center content-description-form">
                 <?php echo $this->infopage->info_pagina_informacion_contacto ?>
 
             </div>
@@ -45,7 +45,7 @@
                             <div class="g-recaptcha" data-sitekey="6LfFDZskAAAAAE2HmM7Z16hOOToYIWZC_31E61Sr"></div>
 
                         </div>
-                        <div class="col-12 col-xxl-6 ">
+                        <div class="col-12 col-xxl-6  d-grid mt-3 mt-xxl-0 ">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" required value="" id="flexCheckDefault">
                                 <label class="form-check-label" for="flexCheckDefault" data-bs-toggle="modal" data-bs-target="#modalPoliticas" role="button">

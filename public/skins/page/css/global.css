@@ -1,48 +1,56 @@
 @font-face {
   font-family: 'Roboto';
   src: url('/assets/fonts/Roboto-Black_0.ttf') format('truetype');
-  font-weight: 900; /* Peso de la fuente (900 es Black) */
+  font-weight: 900;
+  /* Peso de la fuente (900 es Black) */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
   src: url('/assets/fonts/Roboto-Bold_0.ttf') format('truetype');
-  font-weight: 700; /* Peso de la fuente (700 es Bold) */
+  font-weight: 700;
+  /* Peso de la fuente (700 es Bold) */
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Roboto';
   src: url('/assets/fonts/Roboto-Light_0.ttf') format('truetype');
-  font-weight: 300; /* Peso para Roboto Light */
+  font-weight: 300;
+  /* Peso para Roboto Light */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
   src: url('/assets/fonts/Roboto-Medium_0.ttf') format('truetype');
-  font-weight: 500; /* Peso para Roboto Medium */
+  font-weight: 500;
+  /* Peso para Roboto Medium */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
   src: url('/assets/fonts/Roboto-Regular.ttf') format('truetype');
-  font-weight: 400; /* Peso para Roboto Regular */
+  font-weight: 400;
+  /* Peso para Roboto Regular */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
   src: url('/assets/fonts/Roboto-Thin_0.ttf') format('truetype');
-  font-weight: 100; /* Peso para Roboto Thin */
+  font-weight: 100;
+  /* Peso para Roboto Thin */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto Condensed';
   src: url('/assets/fonts/RobotoCondensed-Bold.ttf') format('truetype');
-  font-weight: 700; /* Peso para Roboto Condensed Bold */
+  font-weight: 700;
+  /* Peso para Roboto Condensed Bold */
   font-style: normal;
 }
 
@@ -64,7 +72,7 @@
   --negro: #0000;
   --blanco: #FFFFFF;
   --naranja: #ff9f00;
-  --azul: rgb(0, 63, 94);
+  --azul: #003f5e;
 
   --azulclaro: #5294a2;
 
@@ -80,6 +88,25 @@ body {
   overflow-x: hidden;
   height: 100dvh;
 }
+
+
+
+.main-general {
+  /* height: 100dvh; */
+  min-height: 100dvh;
+  z-index: 2;
+
+}
+
+
+.text-gray {
+  color: var(--gris-medio);
+}
+
+.text-thin {
+  font-weight: 400;
+}
+
 
 
 /* *******************
@@ -152,47 +179,80 @@ FOOTER INICIO
 ************************* */
 
 
-footer{
+footer {
   padding: 15px 0;
+  background-color: var(--blanco);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  left: 0;
 }
-.media a{
+
+.media a {
   text-decoration: none;
   color: var(--gris-medio);
-  font-size: 21px;
+  font-size: 24px;
   transition: transform .3s ease;
 }
-.media a:hover{
+
+.media a:hover {
   transform: scale(1.2);
 }
-.menu ul{
+
+.menu ul {
   padding: 0;
   margin-top: 15px;
 }
-.menu li{
+
+.menu li {
   list-style: none;
   /* padding: 5px 0; */
   display: flex;
-    align-items: center;
+  align-items: center;
 }
-.menu li a{
+
+.menu li a {
   text-decoration: none;
   color: var(--gris-medio);
   font-size: 16px;
-  transition: color .3s ease , font-weight .3s ease-in-out allow-discrete;
+  transition: color .3s ease, font-weight .3s ease-in-out allow-discrete;
   font-weight: 400;
 }
 
-.menu li a:hover{
+.menu li a:hover {
   color: var(--azul);
   font-weight: 600;
 }
 
-.menu li a.active{
+.menu li a.active {
   color: var(--azul);
   font-weight: 700;
   text-transform: uppercase;
 }
 
+
+.text-azul {
+  color: var(--azul);
+}
+
+.info-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--azul);
+  font-weight: 500;
+
+
+}
+
+.terms-span {
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+}
 
 /* ********************
 FOOTER FIN
@@ -204,7 +264,7 @@ FOOTER FIN
 /* -------------------
  BANNERS PRINCIPAL INICIO
  -------------------- */
- .slider-principal {
+.slider-principal {
   width: 100%;
 }
 
@@ -326,79 +386,286 @@ FOOTER FIN
  -------------------- */
 
 
-.main-general {
-
-  min-height: 100dvh;
-  z-index: 2;
-}
-
-
-.text-gray{
-  color: var(--gris-medio);
-}
-.text-thin{
-  font-weight: 400;
-}  
-
 
 
 /* *******************
 FORMULARIO INDEX INICIO
  *******************- */
-.bg-greenblue{
+.bg-greenblue {
   background-color: var(--azulclaro);
 }
 
-.form-home{
+.form-home {
   padding: 30px 0;
+  background-image: url('/assets/FondoFormulario.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.form-contact .form_input
-{
-width: 100%;
-padding: 7px 10px;
-color: var(--gris-medio);
-font-weight: 300; /* Peso para Roboto Thin */
-font-size: 15px;
-margin-bottom: 10px;
-border: 0;
+.form-contact .form_input {
+  width: 100%;
+  padding: 7px 10px;
+  color: var(--gris-medio);
+  font-weight: 300;
+  /* Peso para Roboto Thin */
+  font-size: 15px;
+  margin-bottom: 10px;
+  border: 0;
 
 
 }
 
-.form-contact .form_input:focus-visible{
+.form-contact .form_input:focus-visible {
   outline: none;
   border: none;
   box-shadow: 0 0 0 0.15rem rgba(0, 123, 255, 0.25);
 }
 
-.form-contact  .form-check-label{
+.form-contact .form-check-label {
   color: var(--blanco);
- 
+
 }
-.form-contact .form-check-input:checked{
+
+.form-contact .form-check-input:checked {
   background-color: var(--azul) !important;
   border-color: var(--azul) !important;
 }
 
-.btn-blue{
-  padding: 7px 50px;
-  background-color: var(--azul) ;
+.btn-blue {
+  padding: 9px 50px;
+  background-color: var(--azul);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--blanco) ;
+  color: var(--blanco);
   border: none;
   font-size: 18px;
   border-radius: 10px;
-  transition: background-color .3s ease;
-}
-.btn-blue:hover{
-  background-color: var(--gris-oscuro);
+  transition: background-color .3s ease, color .3s ease;
+  text-decoration: none;
+  color: var(--blanco);
 }
 
+.btn-blue:hover {
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+
+}
+
+.modalPoliticas h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 13px;
+}
 
 /* *******************
 FORMULARIO INDEX FIN
  *******************- */
 
+
+/* *******************
+ INDEX FIN
+ *******************- */
+.contenedor-seccion {
+  padding: 20px 0;
+}
+
+.slider-link {
+  text-decoration: none;
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  font-weight: 300;
+  transition: color .3s ease-in-out, font-weight .3s ease-in-out allow-discrete;
+}
+
+.slider-link:hover {
+  color: var(--naranja);
+  font-weight: 600;
+}
+
+
+.slider-link:hover i {
+  transform: translateX(10px);
+
+}
+
+.slider-link i {
+  color: var(--naranja);
+  transition: transform .3s ease-in-out;
+
+}
+
+.titulo_seccion {
+
+  font-size: 24px !important;
+
+  font-weight: 700 !important;
+  text-align: center;
+
+}
+
+.titulo_seccion::after {
+  content: "";
+  display: block;
+  width: 3em;
+  max-width: 70%;
+  border-bottom: 2px solid var(--naranja);
+  margin: 3px auto;
+  padding: 3px;
+  margin-bottom: 15px;
+}
+
+
+.id_14 .design-four {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.id_14 .design-four:hover .imagen-contenido img {
+  transform: scale(1.1);
+}
+
+.id_14 .design-four .imagen-contenido {
+  overflow: hidden;
+
+}
+
+
+.id_14 .design-four .imagen-contenido img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 300px;
+  transition: transform .3s ease-in-out;
+}
+
+.id_14 .design-four .content-body {
+  padding: 30px;
+}
+
+.id_14 .design-four .content-body::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -29px;
+
+  width: 152px;
+  height: 0;
+  border-left: 83px solid transparent;
+
+  border-bottom: 64px solid white;
+
+}
+
+.id_14 .design-four .content-body h2 {
+  line-height: 1;
+  font-size: 20px;
+  font-weight: 600;
+  height: 46px;
+  display: flex;
+  align-items: center;
+
+}
+
+.id_14 .design-four .content-body .descripcion {
+
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.id_14 .design-four .content-body .descripcion p * {
+  font-size: 15px;
+
+}
+
+
+
+
+/* *******************
+ INDEX FIN
+ *******************- */
+
+/* *******************
+ NOSOTROS INICIO
+ *******************- */
+.content-us .design-two {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.content-us .design-two:hover .cont-image img {
+  transform: scale(1.1);
+}
+
+.content-us .design-two .cont-image {
+  overflow: hidden;
+}
+
+.content-us .design-two .cont-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 500px;
+  transition: transform .3s ease-in-out;
+}
+
+.content-us .design-two .col-md-5 {
+  height: 100%;
+}
+
+@media (width >9991px) {
+  .content-us .design-two .col-md-5 {
+
+    padding: 0;
+  }
+}
+
+.content-us .design-two .col-md-7 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 60px;
+}
+
+.contenedor-seccion h2 {
+  color: var(--azul);
+  font-size: 36px;
+  font-family: 'Roboto';
+
+  font-weight: 400;
+  /* Peso para Roboto Thin */
+  font-style: normal;
+}
+
+.btn-orange {
+  padding: 9px 30px;
+  background-color: var(--naranja);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color .3s ease, color .3s ease;
+  text-decoration: none;
+  color: var(--blanco);
+  width: fit-content;
+  font-weight: 400;
+
+}
+
+.btn-orange:hover {
+  color: var(--blanco);
+  background-color: var(--gris-medio);
+}
+
+
+/* *******************
+ NOSOTROS FIN
+ *******************- */

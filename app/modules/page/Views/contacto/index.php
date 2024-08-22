@@ -1,17 +1,12 @@
-<div class="contact-container">
-<?php 
+<div class="">
+  <?php
+  echo $this->formulario;
+  ?>
 
-  echo $this->home;
-
-?>
 </div>
 
-<form action="">
-  <input type="text">
-</form>
-
-<?php 
-
-  echo $this->contenido2;
-
-?>
+<style>
+  .main-general {
+    min-height: auto;
+  }
+</style>

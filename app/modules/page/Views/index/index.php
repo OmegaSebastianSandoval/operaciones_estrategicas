@@ -1,10 +1,10 @@
-<?php
-echo $this->banner;
-?>
-<?php
-echo $this->contenido;
-?>
+<?php echo $this->banner; ?>
 
-<?php
-echo $this->formulario;
-?>
+
+<section class="content-us">
+    <?php echo $this->quienessomos; ?>
+</section>
+
+<?php echo $this->contenido; ?>
+
+<?php echo $this->formulario; ?>

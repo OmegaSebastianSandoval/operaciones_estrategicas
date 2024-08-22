@@ -1,0 +1,204 @@
+@media (max-width:991.5px) {
+    /* BANNER INCIIO */
+
+    .fondo-imagen-responsive img {
+        height: auto;
+        max-height: 580px;
+        width: 100%;
+        object-fit: cover;
+        /* aspect-ratio: 175 / 38; */
+        min-height: 166px;
+    }
+
+    /* BANNER FIN */
+
+
+
+
+    /* footer */
+
+    .menu ul {
+        gap: 10px;
+    }
+
+    .menu li a {
+        text-align: center;
+    }
+
+    /* footer */
+
+
+
+    /* *******************
+ NOSOTROS INICIO
+ *******************- */
+    .contenedor-seccion h2 {
+        font-size: 30px;
+    }
+
+    .content-us .design-two .col-md-7 {
+        padding: 0 20px;
+    }
+
+    .content-us .descripcion p {
+        font-size: 14px;
+    }
+
+    .btn-orange {
+        padding: 4px 20px;
+        font-size: 14px;
+
+    }
+
+    /* *******************
+ NOSOTROS FIN
+ *******************- */
+
+}
+
+@media (max-width:767px) {
+
+    /* BANNER INCIIO */
+    /* -------------------
+  BANNER INTERNAS INICIO
+  -------------------- */
+    .contenido-banner {
+        padding: 8px 32px 9px 48px;
+    }
+
+    .carousel-control-prev-icono {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .carousel-control-next-icono {
+
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+
+    }
+
+
+    .contenido-banner p {
+        display: none;
+    }
+
+    .fondo-imagen-responsive .btn-vinotinto {
+        font-size: 10px;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 12%;
+    }
+
+
+
+    header .btn-amarillo {
+        font-size: 9px !important;
+        margin-right: 8px;
+    }
+
+
+    .fondo-imagen-responsive img {
+        height: auto;
+        max-height: 480px;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 175 / 38;
+        min-height: 166px;
+    }
+
+    .img-banner-interna {
+        height: auto;
+    }
+
+    .id_33 .design-five {
+        margin-bottom: 15px;
+    }
+
+    .content-preguntas .img-preguntas {
+        position: relative;
+    }
+
+    /* -------------------
+BANNER INTERNAS FIN
+-------------------- */
+
+    /* formulario */
+    .content-description-form p span {
+        font-size: 16px !important;
+    }
+
+    /* formulario */
+
+
+    /* footer */
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .info-footer {
+        font-size: 14px;
+        gap: 5px;
+
+
+
+    }
+
+    /* footer */
+
+
+
+
+    /* *******************
+ NOSOTROS INICIO
+ *******************- */
+    .content-us .design-two .col-md-7 {
+        margin-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    /* *******************
+ NOSOTROS FIN
+ *******************- */
+
+}
+
+@media (width < 576px) {
+
+    /* -------------------
+  BANNER INTERNAS INICIO
+  -------------------- */
+    .fondo-imagen-responsive {}
+
+    .img-banner-internas {
+        /* height: 200px;  */
+        /* width: 100%;
+      object-fit: cover;
+      mix-blend-mode: multiply;
+      font-weight: 700; */
+
+    }
+
+    .titulo-banner-internas {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #FFF;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    /* -------------------
+  BANNER INTERNAS FIN
+  -------------------- */
+}
