@@ -6,6 +6,8 @@ class Page_contactoController extends Page_mainController
   public $botonactivo  = 6;
   public function indexAction()
   {
+    $this->_view->banner = $this->template->banner(6);
+
 
     $this->_csrf_section = "omega_index" . date("YmdHis");
     $this->_csrf->generateCode($this->_csrf_section);

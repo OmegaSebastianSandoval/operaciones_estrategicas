@@ -1183,8 +1183,8 @@ class " . ucwords($modelo) . "_Model_DbTable_" . ucwords($controlador) . " exten
 			</div>
 		</div>
 		<div class=\"botones-acciones\">
-			<button class=\"btn btn-guardar\" type=\"submit\">Guardar</button>
-			<a href=\"<?php echo \$this->route; ?>" . $urlcancel . "\" class=\"btn btn-cancelar\">Cancelar</a>
+    <a href=\"<?php echo \$this->route; ?>" . $urlcancel . "\" class=\"btn btn-cancelar\">Cancelar</a>
+    <button class=\"btn btn-guardar\" type=\"submit\">Guardar</button>
 		</div>
 	</form>
 </div>";

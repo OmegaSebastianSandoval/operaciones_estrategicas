@@ -310,11 +310,16 @@ class Administracion_publicidadController extends Administracion_mainController
     $array = array();
 
     // GENERALES
-    $array['100'] = 'Botones Flotantes';
+    // $array['100'] = 'Botones Flotantes';
     $array['101'] = 'PopUp';
 
     // HOME
     $array['1'] = 'Banners Home';
+    $array['2'] = 'Nosotros';
+    $array['3'] = 'Nuestros Servicios';
+    $array['4'] = 'Reorganización Empresarial';
+    $array['5'] = 'Mesa de Ayuda';
+    $array['6'] = 'Contáctenos';
 
     return $array;
   }

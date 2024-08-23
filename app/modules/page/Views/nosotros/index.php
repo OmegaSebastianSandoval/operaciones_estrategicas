@@ -1,3 +1,6 @@
+<?php
+    echo $this->banner;
+    ?>
 <section class="content-us">
 
     <?php

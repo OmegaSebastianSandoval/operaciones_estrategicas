@@ -20,6 +20,12 @@
       Administrar Contenidos
     </a>
   </li>
+  <li <?php if ($this->botonpanel == 5) { ?>class="activo" <?php } ?>>
+    <a href="/administracion/reorganizacion">
+      <i class="fas fa-file-invoice"></i> 
+      Administrar Reorganización
+    </a>
+  </li>
   <?php if (Session::getInstance()->get('kt_login_level') == '1') { ?>
     <li <?php if ($this->botonpanel == 4) { ?>class="activo" <?php } ?>>
       <a href="/administracion/usuario">

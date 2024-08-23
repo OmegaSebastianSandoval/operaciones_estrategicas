@@ -86,7 +86,7 @@
 body {
   width: 100%;
   overflow-x: hidden;
-  height: 100dvh;
+  /* height: 100dvh; */
 }
 
 
@@ -95,7 +95,7 @@ body {
   /* height: 100dvh; */
   min-height: 100dvh;
   z-index: 2;
-
+background-image: ;
 }
 
 
@@ -312,16 +312,16 @@ FOOTER FIN
 
 .contenido-banner {
   position: absolute;
-  width: 50%;
+  width: 100%;
   /* background: #0000008a; */
 
-  height: 100%;
-  color: var(--gris-oscuro);
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  text-align: start;
+  /* height: 100%; */
+  /* color: var(--gris-oscuro); */
+  display: grid;
+  /* flex-direction: column; */
+  align-items: center;
+  /* justify-content: center;
+  text-align: start; */
   padding: 0 5%;
 }
 
@@ -333,7 +333,9 @@ FOOTER FIN
 
 
 }
-
+.contenido-banner .btn-blue{
+  width: fit-content;
+}
 
 .contenido-banner h4 .resaltado {
   font-size: 35px;
@@ -385,6 +387,49 @@ FOOTER FIN
  BANNERS PRINCIPAL FIN
  -------------------- */
 
+
+
+ /* -------------------
+ BANNERS INNTERNA INICIO
+ -------------------- */
+.img-banner-interna {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-indicators .active {
+  background-color: var(--verdeclaro);
+}
+
+
+
+.fondo-imagen-interna-video:hover .img-banner-interna {
+  opacity: 0.7;
+  /* Opaca la imagen al pasar el mouse */
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  /* Hace que el ícono no interfiera con el enlace */
+}
+
+.fondo-imagen-interna-video:hover .play-icon {
+  opacity: 1;
+  /* Muestra el ícono al pasar el mouse */
+}
+
+/* -------------------
+ BANNERS INNTERNA FIN
+ -------------------- */
 
 
 
@@ -668,4 +713,193 @@ FORMULARIO INDEX FIN
 
 /* *******************
  NOSOTROS FIN
+ *******************- */
+
+ 
+ /* *******************
+REORGANIZACION EMPRESARIAL INICIO
+ *******************- */
+
+ .card_r {
+  position: relative;
+
+  height: 300px;
+  /* color: #2e2d31; */
+  /* background: #131313; */
+  /* overflow: hidden; */
+  border-radius: 20px;
+  margin-bottom: 20px;
+
+  clip-path: inset(0 0 0 0 round 10px);
+}
+
+.temporary_text {
+  font-weight: bold;
+  font-size: 24px;
+  /* padding: 6px 12px; */
+  color: #f8f8f8;
+}
+
+.temporary_text img {
+  width: 100%;
+  height: 290px;
+
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.card_date {
+  color: #8D95A2;
+  font-size: 14px;
+  display: block;
+  font-weight: 500;
+}
+
+
+
+.card_content {
+  /* overflow: hidden; */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* edit the width to fit card */
+  width: 100%;
+  padding: 20px;
+  background: #f2f2f2;
+  border-top-left-radius: 20px;
+  /* edit here to change the height of the content box */
+  transform: translateY(60px);
+  transition: transform .25s ease-in-out;
+}
+
+.card_content::before {
+  content: '';
+  position: absolute;
+  top: -47px;
+  right: -45px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-175deg);
+  border-radius: 50%;
+  box-shadow: inset 48px 48px #f2f2f2;
+}
+
+.card_title {
+  color: var(--gris-medio);
+  font-weight: bold;
+  line-height: 1;
+  height: 53px;
+  display: flex;
+  align-items: center;
+}
+
+.card_subtitle {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.card_subtitle * {
+  margin: 0;
+}
+
+.card_description {
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity .5s;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+
+}
+
+.card_r:hover .card_content {
+  transform: translateY(0);
+}
+
+.card_r:hover .card_description {
+  opacity: 1;
+  transition-delay: .25s;
+}
+
+
+
+
+
+
+ .list {
+  position: relative;
+
+}
+
+.list h2 {
+  color: var(--azul);
+  font-weight: 700;
+  /* letter-spacing: 1px; */
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.list ul {
+  position: relative;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: var(--azul) var(--gris-claro);
+}
+
+.list ul li {
+  position: relative;
+  left: 0;
+  color: #fce4ec;
+  list-style: none;
+  margin: 4px 0;
+  border-left: 2px solid var(--azul);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.list ul li:hover {
+  left: 10px;
+}
+
+.list ul li a {
+  position: relative;
+  padding: 8px;
+  padding-left: 12px;
+  display: inline-block;
+  z-index: 1;
+  transition: 0.5s;
+  text-decoration: none;
+  color: var(--gris-medio);
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  align-items: center;
+}
+
+.list ul li:hover a {
+  color: var(--blanco)
+}
+
+.list ul li:before {
+  content: "";
+  position: absolute;
+  width: 97%;
+  height: 100%;
+  background: var(--azul);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+}
+
+.list ul li:hover:before {
+  transform: scaleX(1);
+}
+
+
+ 
+ /* *******************
+REORGANIZACION EMPRESARIAL FIN
  *******************- */

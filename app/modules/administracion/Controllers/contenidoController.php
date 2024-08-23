@@ -420,6 +420,7 @@ class Administracion_contenidoController extends Administracion_mainController
     $array['3'] = 'Nuestros Servicios';
     $array['4'] = 'Reorganización Empresarial';
     $array['5'] = 'Mesa de Ayuda';
+    $array['6'] = 'Contáctenos';
     return $array;
   }
 

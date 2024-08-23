@@ -127,6 +127,27 @@
 BANNER INTERNAS FIN
 -------------------- */
 
+    /* -------------------
+  BANNER INTERNAS INICIO
+  -------------------- */
+
+
+    .titulo-banner-internas {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #FFF;
+        /* text-align: center; */
+        font-weight: 700;
+        padding: 15px;
+        width: 100%;
+    }
+
+    /* -------------------
+BANNER INTERNAS FIN
+-------------------- */
+
     /* formulario */
     .content-description-form p span {
         font-size: 16px !important;
@@ -172,33 +193,4 @@ BANNER INTERNAS FIN
 
 }
 
-@media (width < 576px) {
-
-    /* -------------------
-  BANNER INTERNAS INICIO
-  -------------------- */
-    .fondo-imagen-responsive {}
-
-    .img-banner-internas {
-        /* height: 200px;  */
-        /* width: 100%;
-      object-fit: cover;
-      mix-blend-mode: multiply;
-      font-weight: 700; */
-
-    }
-
-    .titulo-banner-internas {
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #FFF;
-        text-align: center;
-        font-weight: 700;
-    }
-
-    /* -------------------
-  BANNER INTERNAS FIN
-  -------------------- */
-}
+@media (width < 576px) {}

@@ -1,3 +1,7 @@
+<?php
+  echo $this->banner;
+  ?>
+
 <div class="">
   <?php
   echo $this->formulario;

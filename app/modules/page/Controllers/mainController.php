@@ -20,6 +20,12 @@ class Page_mainController extends Controllers_Abstract
 
 		$informacion = $infopageModel->getById(1);
 		$this->_view->infopage = $informacion;
+		
+		$publicidadModel = new Page_Model_DbTable_Publicidad();
+		$this->_view->popup = $publicidadModel->getList("publicidad_seccion='101' AND publicidad_estado=1", "")[0];
+
+
+
 		$this->getLayout()->setData("meta_description","$informacion->info_pagina_descripcion");
 		$this->getLayout()->setData("meta_keywords","$informacion->info_pagina_tags");
 		$this->getLayout()->setData("scripts","$informacion->info_pagina_scripts");

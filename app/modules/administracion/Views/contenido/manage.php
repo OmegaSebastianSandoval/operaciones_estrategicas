@@ -292,6 +292,17 @@
           </div>
           <?php } ?>
         </div>
+        <div class="col-12 form-group">
+					<label for="contenido_archivo">Archivo</label>
+					<input type="file" name="contenido_archivo" id="contenido_archivo" class="form-control  file-document" data-buttonName="btn-primary" onchange="validardocumento('contenido_archivo');" accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint, text/plain, application/pdf">
+					<div class="help-block with-errors"></div>
+					<?php if ($this->content->contenido_archivo) { ?>
+						<div id="archivo_contenido_archivo">
+							<div><?php echo $this->content->contenido_archivo; ?></div>
+							<div><button class="btn btn-danger btn-sm" type="button" onclick="eliminararchivo('contenido_archivo','<?php echo $this->route . "/deletearchivo"; ?>')"><i class="glyphicon glyphicon-remove"></i> Eliminar Archivo</button></div>
+						</div>
+					<?php } ?>
+				</div>
         <div class="col-4 form-group no-banner no-acordion no-carrousel si-seccion"
           <?php if($tipo != 2 && $tipo != 4  ){ ?> style="display: none;" <?php } ?>>
           <label for="contenido_fondo_imagen"><?php if($tipo == 4){ ?>Imagen Banner <?php } else{ ?> Imagen Fondo
