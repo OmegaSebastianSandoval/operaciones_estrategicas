@@ -331,8 +331,8 @@
     </div>
 
     <div class="botones-acciones mt-3">
-      <button class="btn btn-guardar" type="submit">Guardar</button>
       <a href="/administracion/panel" class="btn btn-cancelar">Cancelar</a>
+      <button class="btn btn-guardar" type="submit">Guardar</button>
     </div>
   </form>
 </div>

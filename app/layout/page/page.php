@@ -49,13 +49,16 @@
   <script src="/skins/page/js/main.js?v=2"></script>
 
 
+  <!-- AOS -->
+  <link rel="stylesheet" href="/components/aos-master/dist/aos.css">
+  <script src="/components/aos-master/dist/aos.js"></script>
 
   <!-- metacolor -->
   <meta name="theme-color" content="#003f5e">
   <!-- Recaptcha -->
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <meta name="description" content="<?= $this->_data['meta_description']; ?>" />
-    <meta name=" keywords" content="<?= $this->_data['meta_keywords']; ?>" />
+  <meta name=" keywords" content="<?= $this->_data['meta_keywords']; ?>" />
   <?php echo $this->_data['scripts'];  ?>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -101,6 +104,7 @@
   </script>
 </head>
 
+
 <body>
   <header class="sticky-top">
     <?= $this->_data['header']; ?>
@@ -112,5 +116,6 @@
   <?= $this->_data['adicionales']; ?>
 
 </body>
+
 
 </html>

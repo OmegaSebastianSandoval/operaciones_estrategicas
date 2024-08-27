@@ -33,21 +33,24 @@ class Page_indexController extends Page_mainController
 
     $this->_view->quienessomos = $this->template->getContentseccionById(12);
 
+    $contenidoModel = new Page_Model_DbTable_Contenido();
+
+    $services = $contenidoModel->getList("contenido_padre= '38' AND contenido_estado = '1'", "orden ASC");
+  
+    $this->_view->services = $services;
+    // print_r($services);
 
 
-    
+
     $this->_csrf_section = "omega_index" . date("YmdHis");
     $this->_csrf->generateCode($this->_csrf_section);
     $csrf_section = $this->_csrf_section;
     $csrf = Session::getInstance()->get('csrf')[$this->_csrf_section];
-    
+
     $this->_view->formulario = $this->template->getFormulario($csrf_section, $csrf);
- 
-
-
   }
 
-  
+
   public function enviarmessageAction()
   {
 
@@ -117,7 +120,7 @@ class Page_indexController extends Page_mainController
 
 
     if ($lastname == "") {
-      if ($name != "" and $email != "" and $message != ""  and $service != ""and $phone != "") {
+      if ($name != "" and $email != "" and $message != ""  and $service != "" and $phone != "") {
         if (
           strpos($message, "@") === false &&
           strpos($name, "@") === false &&

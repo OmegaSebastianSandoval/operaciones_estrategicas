@@ -1,4 +1,4 @@
-<div class="caja-contenido-simple design-two" style="background-color: <?php if ($contenido->contenido_fondo_color) {
+<div  data-aos="" class="caja-contenido-simple design-two" style="background-color: <?php if ($contenido->contenido_fondo_color) {
 																			echo  $contenido->contenido_fondo_color;
 																		} else if ($colorfondo) {
 																			echo $colorfondo;

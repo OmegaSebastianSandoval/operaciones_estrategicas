@@ -1,11 +1,12 @@
-<section 
-  id="<?php echo $contenedor->contenido_id ?>" 
-  class="
+<section
+	data-aos
+	id="<?php echo $contenedor->contenido_id ?>"
+	class="
     id_<?php echo $contenedor->contenido_id ?> 
     <?php echo $contenedor->contenido_columna; ?> 
     contenedor-seccion 
     <?php if ($contenedor->contenido_fondo_imagen_tipo == 2) { ?>dinamica<?php } ?>" style="background-image:url(/images/<?php echo $contenedor->contenido_fondo_imagen; ?>); background-color:<?php echo $contenedor->contenido_fondo_color; ?>;">
-  <div class="content-box container">
+	<div class="content-box container">
 		<?php if ($contenedor->contenido_titulo_ver == 1) { ?>
 			<h2 class="titulo_seccion titulo_<?php echo $contenedor->contenido_id ?> <?php echo $contenedor->contenido_titulo_principal ? 'titulo_principal_seccion' : '' ?>  "><?php echo $contenedor->contenido_titulo; ?></h2>
 		<?php } ?>
@@ -43,7 +44,7 @@
 								<?php include(APP_PATH . "modules/page/Views/template/disenio4.php"); ?>
 							<?php } else if ($columna->contenido_disenio == 5) { ?>
 								<?php include(APP_PATH . "modules/page/Views/template/disenio5.php"); ?>
-							<?php } else if ($columna->contenido_disenio == 6) {?>
+							<?php } else if ($columna->contenido_disenio == 6) { ?>
 								<?php include(APP_PATH . "modules/page/Views/template/disenio6.php"); ?>
 							<?php } ?>
 						<?php } else if ($columna->contenido_tipo == 6) { ?>

@@ -1,4 +1,4 @@
-<div class="slider-principal">
+<div class="slider-principal"  data-aos="zoom-out-up">
   <div id="carouselprincipal<?php echo $this->seccionbanner; ?>" class="carousel slide" data-bs-ride="carousel">
 
     <?php if (count($this->banners) >= 2) { ?>

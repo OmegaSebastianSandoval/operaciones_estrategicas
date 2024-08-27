@@ -303,9 +303,10 @@
 						</div>
 					<?php } ?>
 				</div>
-        <div class="col-4 form-group no-banner no-acordion no-carrousel si-seccion"
+        <div class="col-4 form-group no-banner no-acordion no-carrousel si-seccion <?php echo $padre == 38 ? 'd-block' : ''?>"
           <?php if($tipo != 2 && $tipo != 4  ){ ?> style="display: none;" <?php } ?>>
-          <label for="contenido_fondo_imagen"><?php if($tipo == 4){ ?>Imagen Banner <?php } else{ ?> Imagen Fondo
+          <label for="contenido_fondo_imagen">
+            <?php if($tipo == 4){ ?>Imagen Banner <?php }else if($padre==38){echo 'Logo';} else{ ?> Imagen Fondo
             <?php } ?></label>
           <input type="file" name="contenido_fondo_imagen" id="contenido_fondo_imagen" class="form-control  file-image"
             data-buttonName="btn-primary" accept="image/gif, image/jpg, image/jpeg, image/png">
@@ -320,6 +321,27 @@
           </div>
           <?php } ?>
         </div>
+
+
+        <div class="col-4 form-group no-banner no-acordion no-carrousel si-seccion <?php echo $padre == 38 ? 'd-block' : ''?>"   >
+          <label for="contenido_icono">
+            <?php if($tipo == 4){ ?>Imagen Banner <?php }else if($padre==38){echo 'Logo Titulo Servicio';} else{ ?> Imagen Fondo
+            <?php } ?></label>
+          <input type="file" name="contenido_icono" id="contenido_icono" class="form-control  file-image"
+            data-buttonName="btn-primary" accept="image/gif, image/jpg, image/jpeg, image/png">
+          <div class="help-block with-errors"></div>
+          <?php if($this->content->contenido_icono) { ?>
+          <div id="imagen_contenido_icono">
+            <img src="/images/<?= $this->content->contenido_icono; ?>"
+              class="img-thumbnail thumbnail-administrator" />
+            <div><button class="btn btn-danger btn-sm" type="button"
+                onclick="eliminarImagen('contenido_icono','<?php echo $this->route."/deleteimage"; ?>')"><i
+                  class="glyphicon glyphicon-remove"></i> Eliminar Imagen</button></div>
+          </div>
+          <?php } ?>
+        </div>
+
+        
         <div class="col-4 form-group no-carrousel no-acordion no-carrousel si-seccion" <?php if($tipo != 2){ ?>
           style="display: none;" <?php } ?>>
           <label class="control-label">Tipo Fondo</label>
@@ -351,8 +373,9 @@
           </label>
           <div class="help-block with-errors"></div>
         </div>
-        <div class="col-12 form-group no-banner no-carrousel no-seccion no-acordion si-contenido"
-          <?php if($tipo != 3){ ?> style="display: none;" <?php } ?>>
+
+        <div class="col-12 form-group no-banner no-carrousel no-seccion no-acordion si-contenido      <?php echo $padre == 38 ? 'd-block' : '' ?>"
+          <?php if($tipo != 3 ){ ?> style="display: none;" <?php } ?>>
           <label for="contenido_introduccion" class="form-label">Introducci&oacute;n</label>
           <textarea name="contenido_introduccion" id="contenido_introduccion" class="form-control tinyeditor"
             rows="10"><?= $this->content->contenido_introduccion; ?></textarea>

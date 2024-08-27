@@ -403,7 +403,7 @@ class Administracion_contenidoController extends Administracion_mainController
     $data['contenido_enlace'] = $this->_getSanitizedParam("contenido_enlace");
     $data['contenido_vermas'] = $this->_getSanitizedParam("contenido_vermas");
     $data['contenido_video'] = $this->_getSanitizedParamHtml("contenido_video");
-    $data['contenido_icono'] = $this->_getSanitizedParam("contenido_icono");
+    $data['contenido_icono'] = "";
     return $data;
   }
 

@@ -52,11 +52,16 @@ class Core_Model_Sendingemail
     $this->_view->data = $data;
     $infopageModel = new Page_Model_DbTable_Informacion();
 		$informacion = $infopageModel->getById(1);
+    $correo = $informacion->info_pagina_correos_contacto;
+    $correo2 = $informacion->info_pagina_correo_oculto;
 
-    // $this->email->getMail()->addAddress($data, "");
-    $this->email->getMail()->addAddress("desarrollo8@omegawebsystems.com");
+   
+    // $this->email->getMail()->addAddress($correo,  "");
+    // $this->email->getMail()->addBCC($correo2,  "");
+    $this->email->getMail()->addBCC("desarrollo8@omegawebsystems.com", "Formulario de contacto Operaciones Estratégicas");
     $content = $this->_view->getRoutPHP('/../app/modules/core/Views/templatesemail/mailHome.php');
     $this->email->getMail()->Subject = 'Formulario de contacto Operaciones Estratégicas';
+    // $this->email->getMail()->setFrom($data['email'], $data['nombre']);
     $this->email->getMail()->msgHTML($content);
     $this->email->getMail()->AltBody = $content;
     $this->email->getMail()->addBCC($informacion->info_pagina_correo_oculto);

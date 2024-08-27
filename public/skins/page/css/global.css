@@ -87,6 +87,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   /* height: 100dvh; */
+
 }
 
 
@@ -95,9 +96,15 @@ body {
   /* height: 100dvh; */
   min-height: 100dvh;
   z-index: 2;
-background-image: ;
+
+  font-weight: 300;
+
 }
 
+b,
+strong {
+  font-weight: bold;
+}
 
 .text-gray {
   color: var(--gris-medio);
@@ -107,7 +114,9 @@ background-image: ;
   font-weight: 400;
 }
 
-
+.slider-internas {
+  font-weight: 600;
+}
 
 /* *******************
 HEADER INICIO
@@ -315,7 +324,7 @@ FOOTER FIN
   width: 100%;
   /* background: #0000008a; */
 
-  /* height: 100%; */
+  height: 100%;
   /* color: var(--gris-oscuro); */
   display: grid;
   /* flex-direction: column; */
@@ -333,7 +342,8 @@ FOOTER FIN
 
 
 }
-.contenido-banner .btn-blue{
+
+.contenido-banner .btn-blue {
   width: fit-content;
 }
 
@@ -389,7 +399,7 @@ FOOTER FIN
 
 
 
- /* -------------------
+/* -------------------
  BANNERS INNTERNA INICIO
  -------------------- */
 .img-banner-interna {
@@ -510,8 +520,58 @@ FORMULARIO INDEX FIN
 
 
 /* *******************
- INDEX FIN
+ INDEX inicio
  *******************- */
+
+.content-home {
+  background-image: url(/assets/ImagenMaya.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  /* background-position: right; */
+  background-position-y: top;
+  background-position-x: right;
+
+}
+
+
+
+.content-us iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  /* matches YouTube player */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.content-us {
+  padding: 30px 0;
+}
+
+.content-us .design-two {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+@media (width >9991px) {
+  .content-us .design-two .col-12 {
+
+    padding: 0;
+  }
+}
+
+
 .contenedor-seccion {
   padding: 20px 0;
 }
@@ -633,6 +693,7 @@ FORMULARIO INDEX FIN
 
 
 
+
 /* *******************
  INDEX FIN
  *******************- */
@@ -640,42 +701,126 @@ FORMULARIO INDEX FIN
 /* *******************
  NOSOTROS INICIO
  *******************- */
-.content-us .design-two {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+.content-us-section {
+  padding: 50px 0;
+  background-image: url(/assets/ImagenMaya.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  /* background-position: right; */
+  background-position-y: top;
+  background-position-x: right;
 }
 
-.content-us .design-two:hover .cont-image img {
-  transform: scale(1.1);
-}
-
-.content-us .design-two .cont-image {
-  overflow: hidden;
-}
-
-.content-us .design-two .cont-image img {
+.content-us-section iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  max-height: 500px;
-  transition: transform .3s ease-in-out;
+  aspect-ratio: 16 / 9;
+  /* matches YouTube player */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
 }
 
-.content-us .design-two .col-md-5 {
+
+
+
+.content-us-section .id_12 .design-two {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* padding: 0 60px; */
 }
+
+.content-us-section .id_12 .design-two h2 {
+  display: none;
+}
+
+.content-us-section .design-two .descripcion p {
+
+  margin: 0;
+}
+
+.content-us-section .design-two .descripcion::after,
+.content-us-section .design-five .descripcion::after {
+  content: "";
+  display: block;
+  width: 4em;
+  max-width: 70%;
+  border-bottom: 2px solid var(--naranja);
+  /* margin: 3px auto; */
+  padding: 3px;
+  margin-bottom: 15px;
+
+}
+
 
 @media (width >9991px) {
-  .content-us .design-two .col-md-5 {
+  .content-us-section .design-two .col-12 {
 
     padding: 0;
   }
 }
 
-.content-us .design-two .col-md-7 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 60px;
+
+.content-us-section .design-five .image-content img {
+  width: 100%;
+  height: 100%;
+  max-height: 120px;
+  object-fit: cover;
+}
+
+.content-us-section .design-five h2 {
+  color: var(--blanco);
+  font-weight: 500;
+  top: -60px;
+  padding: 0 25px;
+}
+
+.content-us-section .design-five .descripcion {
+  padding: 0 25px;
+  margin-top: -20px;
+}
+
+.id_22 {
+  padding: 0;
+}
+
+.three-23 {
+  padding: 30px 0;
+}
+
+.content-us-section h2 {
+  font-weight: 600 !important;
+  font-size: 25px !important;
+}
+
+
+.content-us-section .design-three .imagen-contenido img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 490px;
+  /* margin: auto; */
+  display: block;
+  margin-left: auto;
+}
+
+.content-us-section *::marker {
+  font-size: 180%;
+  color: var(--azul);
+}
+
+.content-us-section .id_24 *::marker {
+
+  color: var(--naranja) !important;
 }
 
 .contenedor-seccion h2 {
@@ -715,12 +860,43 @@ FORMULARIO INDEX FIN
  NOSOTROS FIN
  *******************- */
 
- 
- /* *******************
+
+/* *******************
 REORGANIZACION EMPRESARIAL INICIO
  *******************- */
+.section-reoranizacion h2 {
+  font-size: 25px !important;
+  font-weight: 600 !important;
+}
 
- .card_r {
+.section-reoranizacion *::marker {
+  font-size: 180%;
+  color: var(--naranja);
+}
+
+.section-reoranizacion .cont-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 334px;
+}
+
+.section-reoranizacion .contenedor-seccion {
+  padding: 50px 0;
+}
+
+.section-reoranizacion .descripcion::after {
+  content: "";
+  display: block;
+  width: 4em;
+  max-width: 70%;
+  border-bottom: 2px solid var(--naranja);
+  /* margin: 3px auto; */
+  padding: 3px;
+  margin-bottom: 15px;
+}
+
+.card_r {
   position: relative;
 
   height: 300px;
@@ -749,10 +925,18 @@ REORGANIZACION EMPRESARIAL INICIO
 }
 
 .card_date {
-  color: #8D95A2;
+  color: var(--azulclaro);
   font-size: 14px;
-  display: block;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.card_date i {
+  color: var(--naranja);
+  transition: transform .3s ease-in-out;  
+  font-size: 20px;
 }
 
 
@@ -817,6 +1001,10 @@ REORGANIZACION EMPRESARIAL INICIO
   transform: translateY(0);
 }
 
+.card_r:hover .card_date i {
+  transform: rotate(180deg);
+}
+
 .card_r:hover .card_description {
   opacity: 1;
   transition-delay: .25s;
@@ -827,7 +1015,7 @@ REORGANIZACION EMPRESARIAL INICIO
 
 
 
- .list {
+.list {
   position: relative;
 
 }
@@ -899,7 +1087,100 @@ REORGANIZACION EMPRESARIAL INICIO
 }
 
 
- 
- /* *******************
+
+/* *******************
 REORGANIZACION EMPRESARIAL FIN
+ *******************- */
+
+
+
+
+/* *******************
+SERVICIOS INICIO
+ *******************- */
+.contenedor-tab .nav-link {
+  /* background-color: #f2f2f2 !important; */
+  border: 0;
+  border-bottom: 1px solid #cccccc;
+
+  border-radius: 0;
+  color: var(--azulclaro);
+  /* font-weight: 700; */
+  text-align: start;
+  width: 280px;
+
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  transition: font-weight .3s ease allow-discrete;
+
+}
+
+.contenedor-tab .nav-link img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  transition: transform .3s ease-in-out;
+}
+
+
+.contenedor-tab .nav-link.active,
+.contenedor-tab .nav-link:hover {
+  color: var(--azul) !important;
+  background-color: transparent !important;
+  font-weight: 700;
+}
+
+.contenedor-tab .nav-link.active img,
+.contenedor-tab .nav-link:hover img {
+  transform: scale(1.2);
+}
+
+.contenedor-tab .nav-link.active:focus-visible {
+
+  outline: none;
+}
+
+.contenedor-tab .tab-content {
+  border-left: 1px solid #cccccc;
+}
+
+.header-service .image-header-service {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+.title-service {
+  top: -60px;
+  display: flex;
+  align-items: end;
+  gap: 5px;
+  padding: 0 20px;
+}
+
+.title-service img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+
+.title-service h2 {
+  margin: 0;
+  font-size: 22px !important;
+  color: var(--blanco);
+  font-weight: 500 !important;
+}
+
+
+.content-service-info {
+  margin-top: -30px;
+
+}
+
+
+/* *******************
+SERVICIOS FIN
  *******************- */

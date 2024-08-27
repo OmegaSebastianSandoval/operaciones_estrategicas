@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <div class="d-flex gap-3 header-info">
+        <div class="d-flex d-none gap-3 header-info">
 
             <div class="separator"></div>
             <div class="content-header">

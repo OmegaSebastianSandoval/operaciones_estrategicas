@@ -1,12 +1,12 @@
 <?php
 echo $this->banner;
 ?>
-<section class="">
+<section class="section-reoranizacion">
     <?php
     echo $this->contenido;
     ?>
 </section>
-<div class="container">
+<div class="container mt-4">
     <div class="row">
         <?php foreach ($this->reorganizacion as $key => $reor) { ?>
 
@@ -44,7 +44,7 @@ echo $this->banner;
         <?php } ?>
         <?php foreach ($this->reorganizacion as $key => $reor) { ?>
 
-            <div class="col-6 col-lg-4 ">
+            <div class="col-12 col-lg-4  " data-aos>
 
 
                 <article class="card_r w-100 shadow">
@@ -59,7 +59,9 @@ echo $this->banner;
                     </div>
                     <div class="card_content">
 
-                        <span class="card_date"><?php echo $reor->fecha ?></span>
+                        <span class="card_date"><?php echo $reor->fecha ?>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
 
                         <span class="card_title"><?php echo $reor->reor_titulo ?></span>
                         <span class="card_subtitle"><?php echo $reor->reor_desc ?>

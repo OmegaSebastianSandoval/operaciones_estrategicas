@@ -1,7 +1,7 @@
-<section class="bg-greenblue form-home">
+<section  data-aos="fade-up" class="bg-greenblue form-home">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-12 col-lg-5 d-flex align-items-center content-description-form">
+            <div class="col-12 col-lg-5 d-flex align-items-start content-description-form">
                 <?php echo $this->infopage->info_pagina_informacion_contacto ?>
 
             </div>

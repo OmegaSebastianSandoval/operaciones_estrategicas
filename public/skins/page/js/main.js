@@ -57,6 +57,27 @@ $(document).ready(function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const animaciones = [
+    "fade-up",
+    "fade-down",
+    "fade-left",
+    "fade-right",
+    "zoom-in",
+    "zoom-out",
+    "flip-left",
+    "flip-right",
+  ];
+  document.querySelectorAll("[data-aos]").forEach((element) => {
+    const animacionAleatoria =
+      animaciones[Math.floor(Math.random() * animaciones.length)];
+    element.setAttribute("data-aos", animacionAleatoria);
+  });
+
+  AOS.init({
+    // once: true,
+    duration: 500,
+  });
+
   document
     .getElementById("form-contact")
     ?.addEventListener("submit", function (e) {
@@ -93,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
           .then((response) => response.json())
           .then((data2) => {
-           // console.log("Status:", data2.status); // Verifica el valor exacto
+            // console.log("Status:", data2.status); // Verifica el valor exacto
 
             if (data2.status.trim().toLowerCase() === "success") {
               Swal.fire({
@@ -118,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           .catch((error) => {
             // console.log("Error:", error);
-            
+
             Swal.fire({
               icon: "error",
               text: "Ha ocurrido un error, por favor intenta de nuevo.",

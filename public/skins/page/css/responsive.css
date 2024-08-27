@@ -54,6 +54,42 @@
  NOSOTROS FIN
  *******************- */
 
+
+
+    /* *******************
+SERVICIOS INICIO
+ *******************- */
+
+    .contenedor-pestanas {
+        flex-wrap: wrap;
+    }
+
+    .contenedor-pestanas .nav {
+        width: 100%;
+    }
+
+    .contenedor-tab .nav-link {
+        width: 100%;
+    }
+
+    .contenedor-tab .tab-content {
+        border: none;
+        margin-top: 15px;
+    }
+
+    .contenedor-pestanas .tab-content {
+        width: 100%;
+    }
+    .header-service .image-header-service{
+    height: 150px;
+    }
+
+
+    /* *******************
+SERVICIOS FIN
+ *******************- */
+
+
 }
 
 @media (max-width:767px) {
@@ -190,6 +226,17 @@ BANNER INTERNAS FIN
     /* *******************
  NOSOTROS FIN
  *******************- */
+
+    /* *******************
+ REOGRANUZACION INICIO
+ *******************- */
+    .card_content::before {
+        height: 150px;
+    }
+
+    /* *******************
+REOGRANUZACION FIN
+*******************- */
 
 }
 
